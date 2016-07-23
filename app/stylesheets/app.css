@@ -101,6 +101,7 @@ ul.roster {
     overflow: hidden;
     text-align: center;
     box-sizing: border-box;
+    cursor: pointer;
     font-family: 'Overwatch', Helvetica, Arial, sans-serif;
     color: #364657;
     font-size: 1em; }
@@ -169,6 +170,7 @@ ul.navigation {
     text-transform: uppercase;
     font-size: 1.5em;
     color: #d2d5d9;
+    cursor: pointer;
     padding: 0.25em 0.5em;
     text-decoration: none; }
     ul.navigation li.selected {
@@ -191,7 +193,7 @@ ul.item-list {
   background: rgba(200, 200, 255, 0.2);
   color: #727272;
   list-style: none;
-  padding: 1em;
+  padding: 1em 0;
   font-weight: bold;
   font-family: 'Futura', Helvetica, Arial, sans-serif;
   -webkit-user-select: none;
@@ -204,15 +206,14 @@ ul.item-list {
   /* Likely future */
   cursor: default; }
   ul.item-list li {
-    padding: 0.7em;
-    margin: 0 2px;
-    display: block; }
+    padding: 0.5em 1.5em;
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase; }
     ul.item-list li:hover {
-      border: 0.2em solid #40aada;
-      padding: 0.5em; }
-    ul.item-list li.owned:hover {
-      border: 0.2em solid #41d941;
-      padding: 0.5em; }
+      background: rgba(200, 200, 255, 0.2); }
+    ul.item-list li.owned span.cost-info {
+      display: none; }
     ul.item-list li span {
       display: inline-block; }
     ul.item-list li span.lock {

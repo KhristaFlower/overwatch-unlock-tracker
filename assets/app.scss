@@ -49,6 +49,7 @@ ul.roster {
     overflow: hidden;
     text-align: center;
     box-sizing: border-box;
+    cursor: pointer;
 
     &.selected {
       border: 2px solid gold;
@@ -141,6 +142,7 @@ ul.navigation {
     text-transform: uppercase;
     font-size: 1.5em;
     color: #d2d5d9;
+    cursor: pointer;
 
     padding: 0.25em 0.5em;
     text-decoration: none;
@@ -178,7 +180,7 @@ ul.item-list {
   color: rgb(114, 114, 114);
 
   list-style: none;
-  padding: 1em;
+  padding: 1em 0;
   font-weight: bold;
 
   @include futura-font;
@@ -186,24 +188,25 @@ ul.item-list {
   cursor: default;
 
   li {
-    padding: 0.7em;
-    margin: 0 2px;
+    padding: 0.5em 1.5em;
     display: block;
+    cursor: pointer;
+    text-transform: uppercase;
 
     &:hover {
-      //background: #AAA;
-      border: 0.2em solid rgb(64, 170, 218);
-      padding: 0.5em;
+      background: rgba(200, 200, 255, 0.2);
     }
 
     &.owned {
-      //background: #cfe6cf;
       //background: rgba(255,255,255,0.2);
+
+      span.cost-info {
+        display: none;
+      }
     }
 
     &.owned:hover {
-      border: 0.2em solid rgb(65, 217, 65);
-      padding: 0.5em;
+      //background: rgba(200, 255, 200, 0.1);
     }
 
     span {
