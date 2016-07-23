@@ -1,0 +1,217 @@
+@import 'partials/hero_colours';
+@import 'partials/mixins';
+
+.overwatch-font {
+  @include overwatch-font;
+}
+
+$fontDark: #364657;
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FFF;
+}
+
+body {
+  background: rgb(041, 051, 070);
+}
+
+//h1 {
+//  font-size: 5em;
+//}
+.selected-hero-name {
+  font-size: 5em;
+  //text-shadow: 0 0 2px #666;
+}
+
+.footer {
+  margin-top: 5em;
+  padding: 5em 0;
+  background: rgba(200,200,255,0.2);
+  color: #AAA;
+}
+
+ul.roster {
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+
+    &[class^="col-"] {
+      padding: 0;
+    }
+
+    display: inline-block;
+    position: relative;
+    border: 2px solid rgb(041, 051, 070);
+    background: #d2d5d9;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+
+    &.selected {
+      border: 2px solid gold;
+      box-shadow: 0 0 15px gold;
+      z-index: 10;
+    }
+
+    @include overwatch-font;
+    color: $fontDark;
+    font-size: 1em;
+
+
+    div.icon-container {
+      @include portrait-icon-gradient;
+    }
+    
+    div.portrait-container {
+      position: relative;
+      //margin-top: -25px;
+      left: 0;
+      z-index: 2;
+    }
+
+    div.name-plate {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.8);
+      z-index: 10;
+    }
+
+    div.details-container {
+      //@include portrait-details-gradient;
+
+      background: rgba(255,255,255,0.8);
+
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+
+      font-size: 1.2em;
+
+      div.percentage-bar {
+        background: rgba(0,0,0,.1);
+        height: 0.2em;
+
+        div.bar {
+          height: inherit;
+        }
+      }
+
+      span.unlocks {
+        @include futura-font;
+
+        span {
+          display: inline-block;
+        }
+
+        span.current {
+          font-size: 1em;
+        }
+
+        span.total {
+          font-size: 0.5em;
+          color: #00a5e2;
+        }
+      }
+
+      img, span {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+ul.navigation {
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+
+    @include futura-font;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #d2d5d9;
+
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+
+    &.selected {
+      background: rgba(200,200,255,0.2);
+      position: relative;
+
+      &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        right: -48px;
+        top: 0;
+        width: 48px;
+        height: 48px;
+        border: 24px solid transparent;
+        border-left: 24px solid rgba(200, 200, 255, 0.2);
+      }
+    }
+
+    small {
+      span {
+        color: #777;
+      }
+    }
+
+  }
+
+}
+
+ul.item-list {
+
+  background: rgba(200,200,255,0.2);
+  color: rgb(114, 114, 114);
+
+  list-style: none;
+  padding: 1em;
+  font-weight: bold;
+
+  @include futura-font;
+  @include unselectable;
+  cursor: default;
+
+  li {
+    padding: 0.7em;
+    margin: 0 2px;
+    display: block;
+
+    &:hover {
+      //background: #AAA;
+      border: 0.2em solid rgb(64, 170, 218);
+      padding: 0.5em;
+    }
+
+    &.owned {
+      //background: #cfe6cf;
+      //background: rgba(255,255,255,0.2);
+    }
+
+    &.owned:hover {
+      border: 0.2em solid rgb(65, 217, 65);
+      padding: 0.5em;
+    }
+
+    span {
+      display: inline-block;
+    }
+    span.lock {
+      float: right;
+      color: rgba(255,255,255,0.5);
+    }
+  }
+}

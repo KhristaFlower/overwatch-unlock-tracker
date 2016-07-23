@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Overwatch";
+  src: url("/fonts/big-noodle-too-oblique.woff") format('woff');
+}
+@font-face {
+  font-family: "Futura";
+  src: url("/fonts/FuturaNo2D-DemiBold.woff") format('woff');
+}
+
+@mixin overwatch-font {
+  font-family: 'Overwatch', Helvetica, Arial, sans-serif;
+}
+
+@mixin futura-font {
+  font-family: 'Futura', Helvetica, Arial, sans-serif;
+}
+
+@mixin portrait-icon-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9db4d5+0,ffedec+100 */
+  background: #9db4d5; /* Old browsers */
+  background: -moz-linear-gradient(top, #9db4d5 0%, #ffedec 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #9db4d5 0%,#ffedec 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #9db4d5 0%,#ffedec 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9db4d5', endColorstr='#ffedec',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin portrait-details-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b9bbc6+0,d2d5d9+50,b9bbc6+100 */
+  background: #b9bbc6; /* Old browsers */
+  background: -moz-linear-gradient(left, #b9bbc6 0%, #d2d5d9 50%, #b9bbc6 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #b9bbc6 0%,#d2d5d9 50%,#b9bbc6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #b9bbc6 0%,#d2d5d9 50%,#b9bbc6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9bbc6', endColorstr='#b9bbc6',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin unselectable {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}

@@ -1,0 +1,100 @@
+.hero-color {
+  &.ana {
+    background: rgb(248, 145, 27);
+  }
+  &.bastion {
+    background: rgb(111, 152, 081);
+  }
+  &.dva {
+    background: rgb(253, 130, 208);
+  }
+  &.genji {
+    background: rgb(136, 252, 049);
+  }
+  &.hanzo {
+    background: rgb(147, 135, 076);
+  }
+  &.junkrat {
+    background: rgb(210, 146, 036);
+  }
+  &.lucio {
+    background: rgb(142, 234, 058);
+  }
+  &.mccree {
+    background: rgb(140, 058, 059);
+  }
+  &.mei {
+    background: rgb(156, 219, 243);
+  }
+  &.mercy {
+    background: rgb(254, 224, 117);
+  }
+  &.pharah {
+    background: rgb(033, 104, 195);
+  }
+  &.reaper {
+    background: rgb(039, 039, 037);
+  }
+  &.reinhardt {
+    background: rgb(169, 149, 143);
+  }
+  &.roadhog {
+    background: rgb(192, 148, 121);
+  }
+  &.soldier76 {
+    background: rgb(089, 114, 180);
+  }
+  &.symmetra {
+    background: rgb(100, 236, 253);
+  }
+  &.torbjorn {
+    background: rgb(252, 099, 032);
+  }
+  &.tracer {
+    background: rgb(246, 144, 047);
+  }
+  &.widowmaker {
+    background: rgb(111, 112, 172);
+  }
+  &.winston {
+    background: rgb(076, 080, 092);
+  }
+  &.zarya {
+    background: rgb(243, 115, 168);
+  }
+  &.zenyatta {
+    background: rgb(198, 155, 034);
+  }
+}
+
+$strength: 0.4;
+$spread: 0.3em;
+.rarity {
+  &.common {
+    color: rgb(245, 245, 245);
+    text-shadow: 0 0 $spread rgba(245, 245, 245, $strength);
+  }
+  &.rare {
+    color: rgb(047, 203, 245);
+    text-shadow: 0 0 $spread rgba(047, 203, 245, $strength);
+  }
+  &.epic {
+    color: rgb(233, 050, 238);
+    text-shadow: 0 0 $spread rgba(233, 050, 238, $strength);
+  }
+  &.legendary, &.special {
+    color: rgb(249, 184, 068);
+    text-shadow: 0 0 $spread rgba(249, 184, 068, $strength);
+  }
+  &.achievement {
+    color: rgb(49, 245, 49);
+    text-shadow: 0 0 $spread rgba(49, 245, 49, $strength);
+  }
+}
+
+.afford {
+  color: rgb(066, 201, 076);
+}
+.not-afford {
+  color: rgb(186, 059, 073);
+}

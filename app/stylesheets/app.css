@@ -1,0 +1,222 @@
+.hero-color.ana {
+  background: #f8911b; }
+.hero-color.bastion {
+  background: #6f9851; }
+.hero-color.dva {
+  background: #fd82d0; }
+.hero-color.genji {
+  background: #88fc31; }
+.hero-color.hanzo {
+  background: #93874c; }
+.hero-color.junkrat {
+  background: #d29224; }
+.hero-color.lucio {
+  background: #8eea3a; }
+.hero-color.mccree {
+  background: #8c3a3b; }
+.hero-color.mei {
+  background: #9cdbf3; }
+.hero-color.mercy {
+  background: #fee075; }
+.hero-color.pharah {
+  background: #2168c3; }
+.hero-color.reaper {
+  background: #272725; }
+.hero-color.reinhardt {
+  background: #a9958f; }
+.hero-color.roadhog {
+  background: #c09479; }
+.hero-color.soldier76 {
+  background: #5972b4; }
+.hero-color.symmetra {
+  background: #64ecfd; }
+.hero-color.torbjorn {
+  background: #fc6320; }
+.hero-color.tracer {
+  background: #f6902f; }
+.hero-color.widowmaker {
+  background: #6f70ac; }
+.hero-color.winston {
+  background: #4c505c; }
+.hero-color.zarya {
+  background: #f373a8; }
+.hero-color.zenyatta {
+  background: #c69b22; }
+
+.rarity.common {
+  color: whitesmoke;
+  text-shadow: 0 0 0.3em rgba(245, 245, 245, 0.4); }
+.rarity.rare {
+  color: #2fcbf5;
+  text-shadow: 0 0 0.3em rgba(47, 203, 245, 0.4); }
+.rarity.epic {
+  color: #e932ee;
+  text-shadow: 0 0 0.3em rgba(233, 50, 238, 0.4); }
+.rarity.legendary, .rarity.special {
+  color: #f9b844;
+  text-shadow: 0 0 0.3em rgba(249, 184, 68, 0.4); }
+.rarity.achievement {
+  color: #31f531;
+  text-shadow: 0 0 0.3em rgba(49, 245, 49, 0.4); }
+
+.afford {
+  color: #42c94c; }
+
+.not-afford {
+  color: #ba3b49; }
+
+@font-face {
+  font-family: "Overwatch";
+  src: url("/fonts/big-noodle-too-oblique.woff") format("woff"); }
+@font-face {
+  font-family: "Futura";
+  src: url("/fonts/FuturaNo2D-DemiBold.woff") format("woff"); }
+.overwatch-font {
+  font-family: 'Overwatch', Helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FFF; }
+
+body {
+  background: #293346; }
+
+.selected-hero-name {
+  font-size: 5em; }
+
+.footer {
+  margin-top: 5em;
+  padding: 5em 0;
+  background: rgba(200, 200, 255, 0.2);
+  color: #AAA; }
+
+ul.roster {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  ul.roster li {
+    display: inline-block;
+    position: relative;
+    border: 2px solid #293346;
+    background: #d2d5d9;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Overwatch', Helvetica, Arial, sans-serif;
+    color: #364657;
+    font-size: 1em; }
+    ul.roster li[class^="col-"] {
+      padding: 0; }
+    ul.roster li.selected {
+      border: 2px solid gold;
+      box-shadow: 0 0 15px gold;
+      z-index: 10; }
+    ul.roster li div.icon-container {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9db4d5+0,ffedec+100 */
+      background: #9db4d5;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #9db4d5 0%, #ffedec 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #9db4d5 0%, #ffedec 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #9db4d5 0%, #ffedec 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9db4d5', endColorstr='#ffedec',GradientType=0 );
+      /* IE6-9 */ }
+    ul.roster li div.portrait-container {
+      position: relative;
+      left: 0;
+      z-index: 2; }
+    ul.roster li div.name-plate {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 10; }
+    ul.roster li div.details-container {
+      background: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      font-size: 1.2em; }
+      ul.roster li div.details-container div.percentage-bar {
+        background: rgba(0, 0, 0, 0.1);
+        height: 0.2em; }
+        ul.roster li div.details-container div.percentage-bar div.bar {
+          height: inherit; }
+      ul.roster li div.details-container span.unlocks {
+        font-family: 'Futura', Helvetica, Arial, sans-serif; }
+        ul.roster li div.details-container span.unlocks span {
+          display: inline-block; }
+        ul.roster li div.details-container span.unlocks span.current {
+          font-size: 1em; }
+        ul.roster li div.details-container span.unlocks span.total {
+          font-size: 0.5em;
+          color: #00a5e2; }
+      ul.roster li div.details-container img, ul.roster li div.details-container span {
+        display: block;
+        text-align: center; }
+
+ul.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  ul.navigation li {
+    display: block;
+    font-family: 'Futura', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #d2d5d9;
+    padding: 0.25em 0.5em;
+    text-decoration: none; }
+    ul.navigation li.selected {
+      background: rgba(200, 200, 255, 0.2);
+      position: relative; }
+      ul.navigation li.selected:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        right: -48px;
+        top: 0;
+        width: 48px;
+        height: 48px;
+        border: 24px solid transparent;
+        border-left: 24px solid rgba(200, 200, 255, 0.2); }
+    ul.navigation li small span {
+      color: #777; }
+
+ul.item-list {
+  background: rgba(200, 200, 255, 0.2);
+  color: #727272;
+  list-style: none;
+  padding: 1em;
+  font-weight: bold;
+  font-family: 'Futura', Helvetica, Arial, sans-serif;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+  cursor: default; }
+  ul.item-list li {
+    padding: 0.7em;
+    margin: 0 2px;
+    display: block; }
+    ul.item-list li:hover {
+      border: 0.2em solid #40aada;
+      padding: 0.5em; }
+    ul.item-list li.owned:hover {
+      border: 0.2em solid #41d941;
+      padding: 0.5em; }
+    ul.item-list li span {
+      display: inline-block; }
+    ul.item-list li span.lock {
+      float: right;
+      color: rgba(255, 255, 255, 0.5); }
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!--<ul class="menu">-->
+        <!--<li><a href="#!/view1">view1</a></li>-->
+        <!--<li><a href="#!/view2">view2</a></li>-->
+    <!--</ul>-->
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container">
+        <h1 class="overwatch-font">Overwatch Unlock Tracker</h1>
+
+        <div ng-controller="HeroSelectController">
+            <ul class="roster row">
+                <li ng-repeat="(name, data) in heroData" ng-click="selectHero(name)" ng-class="{selected: name == selectedHero}" class=" col-lg-1 col-xs-2">
+
+                    <div class="portrait-container">
+                        <img ng-src="images/heroes/{{ name }}.png" alt="{{ name }} hero portrait" class="img-fluid">
+                    </div>
+
+                    <div class="name-plate">
+                        {{ data.display }}
+                    </div>
+
+                    <!--<div class="icon-container">-->
+                        <!--<img ng-src="images/heroes/{{ name }}.png" alt="{{ data.display }} hero icon">-->
+                    <!--</div>-->
+                    <div class="details-container">
+                        <!--<span class="hero-name">{{ data.display }}</span>-->
+                        <div class="percentage-bar">
+                            <div class="bar hero-color {{ name }}" ng-style="{width: getNumberOfHeroUnlocksOwnedPercentage(name) + '%'}"></div>
+                        </div>
+                        <span class="unlocks">
+                            <span class="current">{{ getNumberOfHeroUnlocksOwned(name) }}</span>
+                            <span class="total">/{{ getNumberOfHeroUnlocks(name) }}</span>
+                        </span>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div ng-view></div>
+
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>
+                This application stores data in browser using 'localStorage'.
+                This storage could be emptied when clearing your cookies and other browsing data.
+                Loss of data may happen as a result of user actions.
+            </p>
+        </div>
+    </div>
+
+    <!--<div>Angular seed app: v<span app-version></span></div>-->
+
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+    -->
+    <script src="heroData.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

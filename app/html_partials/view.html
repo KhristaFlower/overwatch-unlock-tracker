@@ -1,0 +1,35 @@
+<h2 class="overwatch-font selected-hero-name">
+    {{ heroData[selectedHero].display }}
+</h2>
+
+<div class="row">
+    <div class="col-sm-6">
+
+        <ul class="navigation" ng-show="selectedHero">
+            <li ng-repeat="(category, name) in categories" ng-click="selectCategory(category)" ng-class="{selected: category == selectedCategory}">
+                <!--<a ng-href="#!/view/{{ selectedHero }}/{{ category }}">{{ name }}</a>-->
+                {{ name }}
+                <small>
+                    {{ getNumberOfHeroUnlocksInCategoryOwned(selectedHero, category) }}<span>/{{ getNumberOfHeroUnlocksInCategory(selectedHero, category) }}</span>
+                </small>
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-sm-6">
+        <ul class="item-list">
+            <li ng-repeat="detail in heroData[selectedHero][selectedCategory]"
+                ng-click="toggle(selectedHero, selectedCategory, detail.name)"
+                ng-class="{owned: own(selectedHero, selectedCategory, detail.name)}"
+            >
+                <span class="name rarity {{ detail.rarity | lowercase }}">{{ detail.name }}</span>
+                <span ng-hide="detail.cost == 0">({{ detail.cost }})</span>
+                <span ng-show="detail.cost == 0">(Special Unlock)</span>
+                <span class="lock">
+                    <i class="fa" ng-class="{'fa-lock': !own(selectedHero, selectedCategory, detail.name)}"></i>
+                </span>
+            </li>
+        </ul>
+
+    </div>
+</div>
