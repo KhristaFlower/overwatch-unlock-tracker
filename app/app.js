@@ -19,7 +19,7 @@ angular.module('myApp', [
 .factory('OWStorage', function () {
     var object = {};
     object.storageKey = 'OverwatchData';
-    object.storageVersion = 2;
+    object.storageVersion = 3;
     object.state = null;
     object.getNewStorage = function () {
         // Populate the initial storage data.
@@ -46,6 +46,10 @@ angular.module('myApp', [
         if (this.state.version == 1) {
             this.migrateSimpleRename('genji', 'voice_lines', 'Teah!', 'Yeah!');
             this.migrateSimpleRename('zarya', 'skins', 'Sawn', 'Dawn');
+            this.state.version += 1;
+        }
+        if (this.state.version == 2) {
+            this.migrateSimpleRename('mercy', 'voice_lines', 'On A Scale Of 1-1A', 'On A Scale Of 1-10');
             this.state.version += 1;
         }
 

@@ -3265,7 +3265,7 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "On A Scale Of 1-1A",
+                "name": "On A Scale Of 1-10",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
