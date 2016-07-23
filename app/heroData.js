@@ -1,5 +1,352 @@
 /** Generated automatically using generateHeroDataJS.php */
 var heroData = {
+    "ana": {
+        "display": "Ana",
+        "skins": [
+            {
+                "name": "Citrine",
+                "rarity": "Rare",
+                "displayOrder": 0,
+                "cost": 75
+            },
+            {
+                "name": "Garnet",
+                "rarity": "Rare",
+                "displayOrder": 0,
+                "cost": 75
+            },
+            {
+                "name": "Peridot",
+                "rarity": "Rare",
+                "displayOrder": 0,
+                "cost": 75
+            },
+            {
+                "name": "Turquoise",
+                "rarity": "Rare",
+                "displayOrder": 0,
+                "cost": 75
+            },
+            {
+                "name": "Merciful",
+                "rarity": "Epic",
+                "displayOrder": 0,
+                "cost": 250
+            },
+            {
+                "name": "Shrike",
+                "rarity": "Epic",
+                "displayOrder": 0,
+                "cost": 250
+            },
+            {
+                "name": "Wadjet",
+                "rarity": "Legendary",
+                "displayOrder": 0,
+                "cost": 1000
+            },
+            {
+                "name": "Wasteland",
+                "rarity": "Legendary",
+                "displayOrder": 0,
+                "cost": 1000
+            },
+            {
+                "name": "Captain Amari",
+                "rarity": "Legendary",
+                "displayOrder": 0,
+                "cost": 1000
+            },
+            {
+                "name": "Horus",
+                "rarity": "Legendary",
+                "displayOrder": 0,
+                "cost": 1000
+            }
+        ],
+        "emotes": [
+            {
+                "name": "Disapproving",
+                "rarity": "Epic",
+                "displayOrder": 0,
+                "cost": 250
+            },
+            {
+                "name": "Protector",
+                "rarity": "Epic",
+                "displayOrder": 0,
+                "cost": 250
+            },
+            {
+                "name": "Tea Time",
+                "rarity": "Epic",
+                "displayOrder": 0,
+                "cost": 250
+            }
+        ],
+        "victory_poses": [
+            {
+                "name": "Protector",
+                "rarity": "Rare",
+                "displayOrder": 0,
+                "cost": 75
+            },
+            {
+                "name": "Mission Complete",
+                "rarity": "Rare",
+                "displayOrder": 0,
+                "cost": 75
+            },
+            {
+                "name": "Seated",
+                "rarity": "Rare",
+                "displayOrder": 0,
+                "cost": 75
+            }
+        ],
+        "voice_lines": [
+            {
+                "name": "Children, Behave",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Everyone Dies",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "It Takes A Woman To Know It",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Justice Delivered",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Justice Rains From Above",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Mother Knows Best",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "No Scope Needed",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Someone To Tuck You In?",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "What Are You Thinking?",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Witness Me",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            }
+        ],
+        "sprays": [
+            {
+                "name": "Action",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Ana",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Bearer",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Cheer",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Cracked",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Cute",
+                "rarity": "Achievement",
+                "displayOrder": 0,
+                "cost": 0
+            },
+            {
+                "name": "Eyepatch",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Fareeha",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Gaze",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Grenade",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Guardian",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Hesitation",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Icon",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Letter",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Old Soldier",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Overhead",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Pixel",
+                "rarity": "Achievement",
+                "displayOrder": 0,
+                "cost": 0
+            },
+            {
+                "name": "Photograph",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Rifle",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Shadow",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Shhh",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Sidearm",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Wedjet",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Wrist Launcher",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "Zzz",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            }
+        ],
+        "highlight_intros": [
+            {
+                "name": "Guardian",
+                "rarity": "Epic",
+                "displayOrder": 0,
+                "cost": 250
+            },
+            {
+                "name": "Locked On",
+                "rarity": "Epic",
+                "displayOrder": 0,
+                "cost": 250
+            },
+            {
+                "name": "Shh...",
+                "rarity": "Epic",
+                "displayOrder": 0,
+                "cost": 250
+            }
+        ],
+        "weapons": [
+            {
+                "name": "Golden",
+                "rarity": "None",
+                "displayOrder": 0,
+                "cost": 0
+            }
+        ]
+    },
     "bastion": {
         "display": "Bastion",
         "skins": [
