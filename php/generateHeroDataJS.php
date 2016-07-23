@@ -46,5 +46,7 @@ if ($json === false) {
     print "JSON encoding failed! " . json_last_error_msg() . "\n";
 } else {
     $fileContent = "$comment\nvar heroData = $json;";
+    // Numbers converts user-added ellipsis to a special character which breaks things.
+    $fileContent = str_replace("\u2026", '...', $fileContent);
     file_put_contents($outputFile, $fileContent);
 }
