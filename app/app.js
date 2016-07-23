@@ -19,12 +19,14 @@ angular.module('myApp', [
 .factory('OWStorage', function () {
     var object = {};
     object.storageKey = 'OverwatchData';
-    object.storageVersion = 3;
+    object.storageVersion = 4;
     object.state = null;
     object.getNewStorage = function () {
         // Populate the initial storage data.
         return {
             version: this.storageVersion,
+            selectedHero: 'ana',
+            selectedCategory: 'skins',
             data: {}
         };
     };
@@ -50,6 +52,11 @@ angular.module('myApp', [
         }
         if (this.state.version == 2) {
             this.migrateSimpleRename('mercy', 'voice_lines', 'On A Scale Of 1-1A', 'On A Scale Of 1-10');
+            this.state.version += 1;
+        }
+        if (this.state.version == 3) {
+            this.state.selectedHero = 'ana';
+            this.state.selectedCategory = 'skins';
             this.state.version += 1;
         }
 
@@ -196,7 +203,7 @@ angular.module('myApp', [
 
     $rootScope.saveData = OWStorage.getState();
 
-    $rootScope.selectedHero = 'bastion';
+    $rootScope.selectedHero = OWStorage.state.selectedHero;
 
     $rootScope.categories = {
         skins: 'Skins',
@@ -208,7 +215,7 @@ angular.module('myApp', [
         weapons: 'Weapons'
     };
 
-    $rootScope.selectedCategory = 'skins';
+    $rootScope.selectedCategory = OWStorage.state.selectedCategory;
 
     $rootScope.own = function (hero, category, item) {
         return OWStorage.own(hero, category, item);
@@ -220,10 +227,14 @@ angular.module('myApp', [
 
     $rootScope.selectHero = function (name) {
         $rootScope.selectedHero = name;
+        OWStorage.state.selectedHero = name;
+        OWStorage.persist();
     };
 
     $rootScope.selectCategory = function (category) {
         $rootScope.selectedCategory = category;
+        OWStorage.state.selectedCategory = category;
+        OWStorage.persist();
     };
 
     $rootScope.getNumberOfHeroUnlocks = function(hero) {
