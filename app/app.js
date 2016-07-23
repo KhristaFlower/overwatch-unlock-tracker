@@ -19,7 +19,7 @@ angular.module('myApp', [
 .factory('OWStorage', function () {
     var object = {};
     object.storageKey = 'OverwatchData';
-    object.storageVersion = 1;
+    object.storageVersion = 2;
     object.state = null;
     object.getNewStorage = function () {
         // Populate the initial storage data.
@@ -30,39 +30,76 @@ angular.module('myApp', [
     };
     object.migrateStorage = function () {
 
+        if (this.state.version > this.storageVersion) {
+            console.log('saveVersionNewerThanStorageVersion');
+        } else if (this.state.version < this.storageVersion) {
+            console.log('migratingVersion');
+            this.doMigration();
+        } else {
+            console.log('migrationNotRequired');
+        }
+
+
+    };
+    object.doMigration = function () {
+
+        if (this.state.version == 1) {
+            this.migrateSimpleRename('genji', 'voice_lines', 'Teah!', 'Yeah!');
+            this.migrateSimpleRename('zarya', 'skins', 'Sawn', 'Dawn');
+            this.state.version += 1;
+        }
+
+        this.persist();
+
+    };
+    object.migrateSimpleRename = function (hero, category, oldName, newName) {
+
+        // If the user never used this field then we don't need to do anything.
+        if (this.isSet(hero, category, oldName)) {
+
+            // We only need to create the entry in the new save format if they have it enabled now.
+            if (this.own(hero, category, oldName)) {
+
+                // Since the new value doesn't exist, toggling will create it.
+                this.toggle(hero, category, newName);
+            }
+
+            // Remove the old data, it is no longer needed in the save data.
+            this.remove(hero, category, oldName);
+        }
+
     };
     object.persist = function () {
-        var storageString = JSON.stringify(this.state);
-        localStorage.setItem(this.storageKey, storageString);
+
+        var debugPersisting = false;
+
+        if (debugPersisting) {
+            console.log('DEBUG PERSISTING', this.state);
+        } else {
+            var storageString = JSON.stringify(this.state);
+            localStorage.setItem(this.storageKey, storageString);
+        }
     };
     object.restore = function () {
 
         var rawStorage = localStorage.getItem(this.storageKey);
-        var storage = null;
 
         if (rawStorage === null) {
-            storage = this.getNewStorage();
-            this.state = storage;
+            this.state = this.getNewStorage();
 
             // Write a copy of the storage now.
             this.persist();
         } else {
-            storage = JSON.parse(rawStorage);
+            this.state = JSON.parse(rawStorage);
         }
 
-        if (storage.version !== this.storageVersion) {
-            storage = this.migrateStorage();
+        if (this.state.version !== this.storageVersion) {
+            this.migrateStorage();
 
             // Update the saved data to the new save version.
-            this.state = storage;
             this.persist();
         }
 
-        this.state = storage;
-
-    };
-    object.toggle = function (hero, category, item) {
-        console.log(hero, category, item);
     };
     object.getState = function () {
         return this.state.data;
@@ -70,36 +107,37 @@ angular.module('myApp', [
     object.setState = function (state) {
         this.state.data = state;
     };
-    return object;
-})
-.controller('HeroSelectController', ['$scope', '$rootScope', 'OWStorage', function ($scope, $rootScope, OWStorage) {
 
-}])
-.run(function ($rootScope, OWStorage) {
+    // Storage management
+    object.isSet = function (hero, category, item) {
 
-    OWStorage.restore();
+        var state = this.getState();
 
-    $rootScope.heroData = heroData;
+        return !!(hero in state && category in state[hero] && item in state[hero][category]);
 
-    $rootScope.saveData = OWStorage.getState();
-
-    $rootScope.selectedHero = 'bastion';
-
-    $rootScope.categories = {
-        skins: 'Skins',
-        emotes: 'Emotes',
-        victory_poses: 'Victory Poses',
-        voice_lines: 'Voice Lines',
-        sprays: 'Sprays',
-        highlight_intros: 'Highlight Intros',
-        weapons: 'Weapons'
     };
+    object.remove = function (hero, category, item) {
 
-    $rootScope.selectedCategory = 'skins';
+        // Check that the data we wish to remove actually exists.
+        if (!this.isSet(hero, category, item)) {
+            return;
+        }
 
-    $rootScope.own = function (hero, category, item) {
+        // Remove the item.
+        delete this.state.data[hero][category][item];
 
-        var state = OWStorage.getState();
+        // Remove any empty objects on the way up the chain.
+        if (Object.keys(this.state.data[hero][category]).length == 0) {
+            delete this.state.data[hero][category];
+
+            if (Object.keys(this.state.data[hero]).length == 0) {
+                delete this.state.data[hero];
+            }
+        }
+    };
+    object.own = function (hero, category, item) {
+
+        var state = this.getState();
 
         if (hero in state && category in state[hero] && item in state[hero][category]) {
             // It could be true or false, just give back the stored value.
@@ -110,11 +148,9 @@ angular.module('myApp', [
         }
 
     };
+    object.toggle = function (hero, category, item) {
 
-    $rootScope.toggle = function (hero, category, item) {
-
-        var state = OWStorage.getState();
-
+        var state = this.getState();
         var isSetting = false;
 
         if (hero in state && category in state[hero] && item in state[hero][category]) {
@@ -137,9 +173,45 @@ angular.module('myApp', [
         // Store the information.
         state[hero][category][item] = isSetting;
 
-        OWStorage.setState(state);
-        OWStorage.persist();
+        this.setState(state);
+        this.persist();
 
+    };
+
+    return object;
+})
+.controller('HeroSelectController', ['$scope', '$rootScope', 'OWStorage', function ($scope, $rootScope, OWStorage) {
+
+}])
+.run(function ($rootScope, OWStorage) {
+
+    OWStorage.restore();
+    console.log('restorationComplete');
+
+    $rootScope.heroData = heroData;
+
+    $rootScope.saveData = OWStorage.getState();
+
+    $rootScope.selectedHero = 'bastion';
+
+    $rootScope.categories = {
+        skins: 'Skins',
+        emotes: 'Emotes',
+        victory_poses: 'Victory Poses',
+        voice_lines: 'Voice Lines',
+        sprays: 'Sprays',
+        highlight_intros: 'Highlight Intros',
+        weapons: 'Weapons'
+    };
+
+    $rootScope.selectedCategory = 'skins';
+
+    $rootScope.own = function (hero, category, item) {
+        return OWStorage.own(hero, category, item);
+    };
+
+    $rootScope.toggle = function (hero, category, item) {
+        OWStorage.toggle(hero, category, item);
     };
 
     $rootScope.selectHero = function (name) {

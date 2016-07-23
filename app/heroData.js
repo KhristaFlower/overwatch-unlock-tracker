@@ -854,7 +854,7 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "Teah!",
+                "name": "Yeah!",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -6657,7 +6657,7 @@ var heroData = {
                 "cost": 75
             },
             {
-                "name": "Sawn",
+                "name": "Dawn",
                 "rarity": "Epic",
                 "displayOrder": 0,
                 "cost": 250
