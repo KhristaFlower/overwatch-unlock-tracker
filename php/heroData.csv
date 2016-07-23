@@ -2,7 +2,7 @@ Bastion,skins,Dawn,Rare,0
 Bastion,skins,Soot,Rare,0
 Bastion,skins,Meadow,Rare,0
 Bastion,skins,Sky,Rare,0
-Bastion,skins,"Defense Matric",Epic,0
+Bastion,skins,"Defense Matrix",Epic,0
 Bastion,skins,"Omnic Crisis",Epic,0
 Bastion,skins,Antique,Legendary,0
 Bastion,skins,Woodbot,Legendary,0
@@ -81,8 +81,8 @@ D.Va,voice_lines,"I Play to Win",Common,0
 D.Va,voice_lines,"Is This Easy Mode?",Common,0
 D.Va,voice_lines,"No Hacks Required",Common,0
 D.Va,sprays,Bang,Common,0
+D.Va,sprays,Bubble,Common,0
 D.Va,sprays,"Bubble Gum",Common,0
-D.Va,sprays,Bunny,Common,0
 D.Va,sprays,Bunny,Common,0
 D.Va,sprays,"Bunny Hop",Common,0
 D.Va,sprays,Cute,Achievement,0
@@ -140,6 +140,7 @@ Genji,sprays,Cute,Achievement,0
 Genji,sprays,Dragon,Common,0
 Genji,sprays,Dragonblade,Common,0
 Genji,sprays,Draw,Common,0
+Genji,sprays,"Fully Loaded",Common,0
 Genji,sprays,"God of War",Common,0
 Genji,sprays,"Green Ninja",Common,0
 Genji,sprays,Icon,Common,0
@@ -151,7 +152,6 @@ Genji,sprays,Pixel,Achievement,0
 Genji,sprays,Prepared,Common,0
 Genji,sprays,Ryugekiken,Common,0
 Genji,sprays,Shimada,Common,0
-Genji,sprays,Shuriken,Common,0
 Genji,sprays,Shuriken,Common,0
 Genji,sprays,Signature,Common,0
 Genji,sprays,Soul,Common,0
@@ -181,8 +181,8 @@ Hanzo,victory_poses,Confident,Rare,0
 Hanzo,victory_poses,Kneeling,Rare,0
 Hanzo,victory_poses,"Over the Shoulder",Rare,0
 Hanzo,voice_lines,"Flow Like Water",Common,0
-Hanzo,voice_lines,"From one thing…",Common,0
-Hanzo,voice_lines,Hm…,Common,0
+Hanzo,voice_lines,"From one thing...",Common,0
+Hanzo,voice_lines,Hm...,Common,0
 Hanzo,voice_lines,"I Do What I Must",Common,0
 Hanzo,voice_lines,"Never In Doubt",Common,0
 Hanzo,voice_lines,"Never Second Best",Common,0
@@ -235,7 +235,7 @@ Junkrat,emotes,Puppet,Epic,0
 Junkrat,victory_poses,"It'll Freeze That Way",Rare,0
 Junkrat,victory_poses,Kneeling,Rare,0
 Junkrat,victory_poses,"Nyah Nyah",Rare,0
-Junkrat,voice_lines,"…Blow It Up Again",Common,0
+Junkrat,voice_lines,"...Blow It Up Again",Common,0
 Junkrat,voice_lines,"Anyone Want Some BBQ?",Common,0
 Junkrat,voice_lines,Brrring!,Common,0
 Junkrat,voice_lines,"Coming Up Explodey!",Common,0
@@ -314,9 +314,9 @@ Lucio,sprays,Hero,Common,0
 Lucio,sprays,Icon,Common,0
 Lucio,sprays,"In Concert",Common,0
 Lucio,sprays,Kambo,Common,0
+Lucio,sprays,Mural,Common,0
 Lucio,sprays,Pixel,Achievement,0
 Lucio,sprays,Scratch,Common,0
-Lucio,sprays,Signature,Common,0
 Lucio,sprays,Signature,Common,0
 Lucio,sprays,Spin,Common,0
 Lucio,sprays,Tag,Common,0
@@ -348,9 +348,9 @@ McCree,victory_poses,"Take It East",Rare,0
 McCree,voice_lines,"Ain't I Killed You Before",Common,0
 McCree,voice_lines,"Happens To The Best Of Us",Common,0
 McCree,voice_lines,"I Tried Being Reasonable",Common,0
-McCree,voice_lines,"I'm the Quick…",Common,0
+McCree,voice_lines,"I'm the Quick...",Common,0
 McCree,voice_lines,"I'm Your Huckleberry",Common,0
-McCree,voice_lines,"I've Got A Bullet…",Common,0
+McCree,voice_lines,"I've Got A Bullet...",Common,0
 McCree,voice_lines,"Reach For The Sky",Common,0
 McCree,voice_lines,"Sure As Hell Ain't Ugly",Common,0
 McCree,voice_lines,"Wanted: Dead or Alive",Common,0
@@ -531,7 +531,7 @@ Pharah,sprays,Guardian,Common,0
 Pharah,sprays,Hieroglyph,Common,0
 Pharah,sprays,Icon,Common,0
 Pharah,sprays,Incoming,Common,0
-Pharah,sprays,Justice…,Common,0
+Pharah,sprays,Justice...,Common,0
 Pharah,sprays,"On Guard",Common,0
 Pharah,sprays,Pixel,Achievement,0
 Pharah,sprays,"Play Pharah",Common,0
@@ -684,7 +684,7 @@ Roadhog,voice_lines,"Hook, Line, And Sinker",Common,0
 Roadhog,voice_lines,"Life Is Pain, So Is Death",Common,0
 Roadhog,voice_lines,"Piece Of Cake",Common,0
 Roadhog,voice_lines,"Push Off",Common,0
-Roadhog,voice_lines,"Say ""Bacon""…",Common,0
+Roadhog,voice_lines,"Say ""Bacon""...",Common,0
 Roadhog,voice_lines,"Violence Is The Answer",Common,0
 Roadhog,voice_lines,"We're All Animals",Common,0
 Roadhog,sprays,Breathin',Common,0
@@ -734,7 +734,7 @@ Roadhog,weapons,Golden,None,0
 "Soldier: 76",victory_poses,"Locked and Loaded",Rare,0
 "Soldier: 76",victory_poses,Soldier,Rare,0
 "Soldier: 76",voice_lines,"Get Off My Lawn",Common,0
-"Soldier: 76",voice_lines,"I Didn't Start This War…",Common,0
+"Soldier: 76",voice_lines,"I Didn't Start This War...",Common,0
 "Soldier: 76",voice_lines,"I'm An Army Of One",Common,0
 "Soldier: 76",voice_lines,"Not On My Watch",Common,0
 "Soldier: 76",voice_lines,"Old Soldiers",Common,0
@@ -760,11 +760,11 @@ Roadhog,weapons,Golden,None,0
 "Soldier: 76",sprays,"Old Soldier",Common,0
 "Soldier: 76",sprays,Pixel,Achievement,0
 "Soldier: 76",sprays,"Pulse Rifle",Common,0
+"Soldier: 76",sprays,Resolute,Common,0
 "Soldier: 76",sprays,"Rifle: 76",Common,0
 "Soldier: 76",sprays,Rockets,Common,0
 "Soldier: 76",sprays,Salute,Common,0
 "Soldier: 76",sprays,"Strike Commander",Common,0
-"Soldier: 76",sprays,Vigilante,Common,0
 "Soldier: 76",sprays,Vigilante,Common,0
 "Soldier: 76",sprays,Visor,Common,0
 "Soldier: 76",sprays,Wanted,Common,0
@@ -961,7 +961,7 @@ Widowmaker,voice_lines,"Look For The Woman",Common,0
 Widowmaker,voice_lines,Magnifique,Common,0
 Widowmaker,voice_lines,"One Shot, One Kill",Common,0
 Widowmaker,voice_lines,"Ouh La La",Common,0
-Widowmaker,voice_lines,"Step Into My Parlor…",Common,0
+Widowmaker,voice_lines,"Step Into My Parlor...",Common,0
 Widowmaker,voice_lines,"That's How It Is",Common,0
 Widowmaker,voice_lines,"To Life, To Death",Common,0
 Widowmaker,voice_lines,"What's An Aimbot?",Common,0
@@ -1078,7 +1078,6 @@ Zarya,voice_lines,"Welcome To The Gun Show",Common,0
 Zarya,sprays,512,Common,0
 Zarya,sprays,Alexandra,Common,0
 Zarya,sprays,Avenger,Common,0
-Zarya,sprays,Avenger,Common,0
 Zarya,sprays,Barrier,Common,0
 Zarya,sprays,Bear,Common,0
 Zarya,sprays,Cannon,Common,0
@@ -1086,6 +1085,7 @@ Zarya,sprays,Champion,Common,0
 Zarya,sprays,Cute,Achievement,0
 Zarya,sprays,Defender,Common,0
 Zarya,sprays,Focused,Common,0
+Zarya,sprays,"For The People",Common,0
 Zarya,sprays,"Gun Show",Common,0
 Zarya,sprays,Icon,Common,0
 Zarya,sprays,Lift,Common,0

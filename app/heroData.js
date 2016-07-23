@@ -28,7 +28,7 @@ var heroData = {
                 "cost": 75
             },
             {
-                "name": "Defense Matric",
+                "name": "Defense Matrix",
                 "rarity": "Epic",
                 "displayOrder": 0,
                 "cost": 250
@@ -527,13 +527,13 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "Bubble Gum",
+                "name": "Bubble",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
             },
             {
-                "name": "Bunny",
+                "name": "Bubble Gum",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -898,6 +898,12 @@ var heroData = {
                 "cost": 25
             },
             {
+                "name": "Fully Loaded",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
                 "name": "God of War",
                 "rarity": "Common",
                 "displayOrder": 0,
@@ -959,12 +965,6 @@ var heroData = {
             },
             {
                 "name": "Shimada",
-                "rarity": "Common",
-                "displayOrder": 0,
-                "cost": 25
-            },
-            {
-                "name": "Shuriken",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -1159,13 +1159,13 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "From one thing\u2026",
+                "name": "From one thing...",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
             },
             {
-                "name": "Hm\u2026",
+                "name": "Hm...",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -1500,7 +1500,7 @@ var heroData = {
         ],
         "voice_lines": [
             {
-                "name": "\u2026Blow It Up Again",
+                "name": "...Blow It Up Again",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -1993,6 +1993,12 @@ var heroData = {
                 "cost": 25
             },
             {
+                "name": "Mural",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
                 "name": "Pixel",
                 "rarity": "Achievement",
                 "displayOrder": 0,
@@ -2000,12 +2006,6 @@ var heroData = {
             },
             {
                 "name": "Scratch",
-                "rarity": "Common",
-                "displayOrder": 0,
-                "cost": 25
-            },
-            {
-                "name": "Signature",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -2212,7 +2212,7 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "I'm the Quick\u2026",
+                "name": "I'm the Quick...",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -2224,7 +2224,7 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "I've Got A Bullet\u2026",
+                "name": "I've Got A Bullet...",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -3363,7 +3363,7 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "Justice\u2026",
+                "name": "Justice...",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -4330,7 +4330,7 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "Say \"Bacon\"\u2026",
+                "name": "Say \"Bacon\"...",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -4647,7 +4647,7 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "I Didn't Start This War\u2026",
+                "name": "I Didn't Start This War...",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -4805,6 +4805,12 @@ var heroData = {
                 "cost": 25
             },
             {
+                "name": "Resolute",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
                 "name": "Rifle: 76",
                 "rarity": "Common",
                 "displayOrder": 0,
@@ -4824,12 +4830,6 @@ var heroData = {
             },
             {
                 "name": "Strike Commander",
-                "rarity": "Common",
-                "displayOrder": 0,
-                "cost": 25
-            },
-            {
-                "name": "Vigilante",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -6077,7 +6077,7 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "Step Into My Parlor\u2026",
+                "name": "Step Into My Parlor...",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
@@ -6815,12 +6815,6 @@ var heroData = {
                 "cost": 25
             },
             {
-                "name": "Avenger",
-                "rarity": "Common",
-                "displayOrder": 0,
-                "cost": 25
-            },
-            {
                 "name": "Barrier",
                 "rarity": "Common",
                 "displayOrder": 0,
@@ -6858,6 +6852,12 @@ var heroData = {
             },
             {
                 "name": "Focused",
+                "rarity": "Common",
+                "displayOrder": 0,
+                "cost": 25
+            },
+            {
+                "name": "For The People",
                 "rarity": "Common",
                 "displayOrder": 0,
                 "cost": 25
